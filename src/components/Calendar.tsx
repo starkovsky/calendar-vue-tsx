@@ -28,8 +28,8 @@ export default class Calendar extends VueComponent<Props> {
 
   private get currentMonthDays() {
     const days: string[] = [];
-    for (let day = 1; day < this.numberOfDaysInMonth; day++) {
-      days.push(`${day}-${this.month}-${this.year}`);
+    for (let day = 0; day < this.numberOfDaysInMonth; day++) {
+      days.push(`${day+1}-${this.month}-${this.year}`);
     }
     const firstWeekday = dayjs(days[0]).weekday();
     const emptyDays = [];
