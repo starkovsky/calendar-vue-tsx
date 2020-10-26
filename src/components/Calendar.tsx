@@ -59,7 +59,7 @@ export default class Calendar extends VueComponent<Props> {
           day === this.selectedDay ? styles.selected : null,
           withTask ? styles.withTask : null,
         ]}
-        onClick={() => this.onClick(day)}
+        onClick={() => this.handleOnChangeDay(day)}
       >
         {this.foramttedDay(day)}
       </div>
@@ -70,8 +70,7 @@ export default class Calendar extends VueComponent<Props> {
 
   @Model('change', { type: String }) readonly selectedDay!: string;
 
-  private onClick(day: string) {
-    console.log(day);
+  private handleOnChangeDay(day: string) {
     this.$emit('change', day);
   }
 

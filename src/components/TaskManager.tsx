@@ -29,9 +29,9 @@ export default class TaskManager extends VueComponent {
     const days: string[] = [];
     this.store.tasks.map((task: Task) => {
       if (days.some((day: string) => task.date === day)) {
-      } else {
-        days.push(task.date);
+        return;
       }
+      days.push(task.date);
     });
     return days;
   }
@@ -60,7 +60,7 @@ export default class TaskManager extends VueComponent {
         ></Calendar>
         <TaskList
           taskList={this.taskListBySelectDay}
-          onAdd={(newTask: string) => this.AddNewTask(newTask)}
+          onAdd={this.AddNewTask}
           onUpdate={(status: boolean, id: number) =>
             this.updateTask(status, id)
           }
