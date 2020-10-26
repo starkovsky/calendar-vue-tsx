@@ -1,0 +1,6 @@
+.layout {
+  display: flex;
+  gap: 34px;
+  align-items: center;
+  justify-content: center;
+}

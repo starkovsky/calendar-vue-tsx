@@ -1,7 +1,8 @@
 import { Component, Vue } from 'vue-property-decorator';
 import HelloWorld from './components/HelloWorld';
+import TaskManager from './components/TaskManager';
 
-import './App.css'
+import './App.css';
 
 @Component
 export default class App extends Vue {
@@ -9,8 +10,9 @@ export default class App extends Vue {
     return (
       <div id="app">
         <img alt="Vue logo" src={require('./assets/logo.png')} />
-        <HelloWorld msg1="Welcome to Your Vue.js + TypeScript App"/>
+        <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+        <TaskManager></TaskManager>
       </div>
-    )
+    );
   }
 }

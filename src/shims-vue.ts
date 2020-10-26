@@ -1,13 +1,15 @@
-import Vue from 'vue'
+import Vue from 'vue';
 
-type CSSClass = (string | {
-    [key: string]: string
-})
+type CSSClass =
+  | string
+  | {
+      [key: string]: string;
+    };
 
 export class VueComponent<Props = {}> extends Vue {
-	// @ts-ignore
-	public $props: Props & {
-        key?: string
-        class?: CSSClass | CSSClass[]
-    }
+  // @ts-ignore
+  public $props: Props & {
+    key?: string;
+    class?: CSSClass | CSSClass[];
+  };
 }
