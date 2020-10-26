@@ -1,4 +1,4 @@
-# ozon
+# Calendar
 
 ## Project setup
 
@@ -17,6 +17,16 @@ npm run serve
 ```
 npm run build
 ```
+
+### Prettier
+
+```
+npm run prettier
+```
+
+### See result
+
+[https://starkovsky.github.io/calendar-vue-tsx/](https://starkovsky.github.io/calendar-vue-tsx/).
 
 ### Customize configuration
 
